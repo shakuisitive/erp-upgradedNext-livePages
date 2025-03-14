@@ -1,3 +1,4 @@
+'use client'
 import dynamic from "next/dynamic";
 
 const PurchaseBody2 = dynamic(() => import("./_components/PurchaseBody2"), {

@@ -129,6 +129,7 @@ const SubGrid = ({
           </div> */}
           {head?.map((data, i) => (
             <div
+            key={i}
               className={` flex ${
                 data.title == "" && i == 0
                   ? "overflow-hidde"

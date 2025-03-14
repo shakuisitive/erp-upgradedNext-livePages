@@ -312,6 +312,7 @@ const MainGrid = ({
         {gridArr?.map((data, index) => {
           return (
             <div
+              key={index}
               ref={data.ref}
               // key={data?.pvId || index} 
               // ref={activeGridRef}
