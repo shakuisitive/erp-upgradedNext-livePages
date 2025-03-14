@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+body{
+ /* font-family: 'Figtree', Roboto, "Noto Kufi Arabic", "Noto Sans JP", sans-serif; */
+  /* ::-webkit-scrollbar {
+    display: none;
+} */
+/* Width of the scrollbar */
+
+.custom-scrollbar-hidden {
+  scrollbar-width: none; 
+}
+
+.custom-scrollbar-hidden::-webkit-scrollbar {
+  display: none; 
+}
+::-webkit-scrollbar {
+    width: 6px; /* Width of vertical scrollbar */
+    height: 6px; /* Height of horizontal scrollbar */
+}
+
+/* For the track (the area on which the thumb moves) */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* You can change 
+    this to any color you prefer */
+    /* bottom:0 */
+}
+
+/* For the thumb (the draggable bar) */
+::-webkit-scrollbar-thumb {
+    background-color: gainsboro; /* Color of the thumb */
+    border-radius: 4px; /* Radius of the thumb corners */
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+}
+}
+/* .figtree{
+  font-family: var(--figtree-init);
+}*/
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+.no-scrollbar {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profit-input {
+  padding-right: 20px; /* Add space for the icon */
+}
+
+.percentage-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.profit-input[type='number']::-webkit-outer-spin-button,
+.profit-input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.profit-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.pdf-close {
+  font-size: 3rem;
+  font-weight: 900;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.pdfModalFullScreenWapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background-color: #525659;
+}
+
+.pdf-loader {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.visually-hidden{
+  color: white;
+  font-weight: 700;
+  font-size: larger;
+  padding: 8px;
+}
+
+.invt::placeholder {
+  text-transform: uppercase !important;
+}
+
+
+.poppins{
+  font-family: var(--poppins-init);
+
+} 
+.topRightRadius{
+    border-top-left-radius: 10px ;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 160px;
+  height: 160px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  
+  color: black;
+}
+
+.flip-card-back {
+  /* background-color: #2980b9; */
+  /* color: white; */
+  transform: rotateY(180deg);
+}
+.dropdown {
+  border: 1px solid;
+  width: fit-content;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown input {
+  border-radius: 0;
+  background: #fff;
+  margin: 0;
+  height: auto;
+  padding: 10px 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+ul {
+  padding-bottom: 10px;
+  border-top: 1px solid rgb(225, 225, 225);
+}
+
+ul li {
+  padding: 5px 0px;
+  font-size: 14px;
+  cursor: pointer;
+    color: #323338;
+      text-transform: capitalize;
+      position: relative;
+      z-index: 100;
+  background: #fff;
+}
+
+.highlighted {
+  /* Add your desired hover effect styles */
+  background-color:rgb(218, 214, 214);
+  /* color: /* Your desired text color */
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+@media print {
+  .mainBarcodeContent{
+    display: none;
+  }
+}
+@media print {
+  .printContent{
+      display: block;
+  }
+}
+.printContent{
+  display : none;
+}
+
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.hexagon{
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /* background-color: ; */
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+  box-shadow: inset 0 0 100px rgba(206, 206, 206, 0.226);
+}
+
+
+
+/* right drawer  */
+
+/* Define custom video controls class */
+.custom-video-controls video::-webkit-media-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-video-controls video::-webkit-media-controls-panel {
+  display: none;
+}
+
+.custom-video-controls video::-webkit-media-controls-timeline {
+  background-color: #ddd;
+  height: 10px;
+}
+
+.custom-video-controls video::-webkit-media-controls-timeline-container {
+  height: 10px;
+}
+
+.custom-video-controls video::-webkit-media-controls-timeline,
+.custom-video-controls video::-webkit-media-controls-timeline-progress-bar {
+  height: 10px;
+}
+
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply slide-in-right animation */
+.animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+
+
+.resizable-container {
+  position: relative;
+  /* border: 1px solid #ccc; */
+  overflow: hidden;
+  
+
+}
+
+.resizable-content {
+  width: 100%;
+  height: 100px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  /* height: 10px; */
+  height: 100%;
+  background-color: #e2e2e2;
+  cursor: col-resize;
+}
